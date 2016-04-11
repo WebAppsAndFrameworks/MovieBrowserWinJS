@@ -38,6 +38,26 @@ function loadInitialPage() {
 function handleLoadedPage() {
     var circleButton = document.querySelector("#circleButton");
     circleButton.addEventListener("click", loadResultsPage);
+
+    $("#circleButton")
+        .velocity({
+            /* Animate a color property to a hex value of red... */
+            backgroundColor: "#ff0000",
+            /* ... with a 50% opacity. */
+            backgroundColorAlpha: 0.5,
+            /* Animate the red RGB component to 50% (0.5 * 255). */
+            colorRed: "50%",
+            /* Concurrently animate to a stronger blue. */
+            colorBlue: "+=50",
+            /* Fade the text down to 85% opacity. */
+            colorAlpha: 0.85
+        },
+        {
+            duration: 500,
+            delay: 0,
+            easing: "easeInSine",
+            loop: true
+        });
 }
 
 function loadResultsPage() {

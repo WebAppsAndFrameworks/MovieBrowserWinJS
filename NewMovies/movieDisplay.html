@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="movieTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="movieView">
+            <img class="boxart" alt="Temp" src="/images/Temp.png" data-win-bind="src:boxart" />
+            <h1 class="title" data-win-bind="textContent:title"></h1>
+            <p class="summary"data-win-bind="textContent:summary"></p>
+        </div>
+    </div>
+    <div id="movieContainer">
+        <div data-win-control="WinJS.UI.FlipView" data-win-options="{itemDataSource:movieData.dataSource, itemTemplate:select('#movieTemplate')}"></div>
+    </div>
+</body>
+</html>
